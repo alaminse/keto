@@ -21,6 +21,14 @@
               <li><a href="{{ route('admin.user_list') }}">User List</a></li>
             </ul>
           </li>
+          <li class="sidebar-list">
+            <a class="sidebar-link sidebar-title" href="#"><i data-feather="clipboard"></i><span>Diet Combination</span></a>
+            <ul class="sidebar-submenu">
+              <li><a href="{{ route('dietcombinations.index') }}">Combination List</a></li>
+              <li><a href="{{ route('dietcombinations.create') }}">Add Combination</a></li>
+              <li><a href="{{ route('dietcombinations.index') }}">Combination Request</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
       <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

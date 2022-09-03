@@ -36,6 +36,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset("public/backend/assets/css/vendors/owlcarousel.css")}}">
     <link rel="stylesheet" type="text/css" href="{{ asset("public/backend/assets/css/vendors/prism.css")}}">
     <!-- Plugins css Ends-->
+    <!-- datatable -->
+    <link rel="stylesheet" type="text/css" href="{{asset('public/backend/assets/css/vendors/datatables.css')}}">
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="{{ asset("public/backend/assets/css/vendors/bootstrap.css")}}">
     <!-- App css-->
@@ -43,6 +45,8 @@
     <link id="color" rel="stylesheet" href="{{ asset("public/backend/assets/css/color-1.css")}}" media="screen">
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="{{ asset("public/backend/assets/css/responsive.css")}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('backend/toastr/toastr.min.css')}}">
+
   </head>
   <body>
     <!-- tap on top starts-->
@@ -133,6 +137,8 @@
     <script src="{{ asset("public/backend/assets/js/config.js")}}"></script>
     <!-- Plugins JS start-->
     <script src="{{ asset("public/backend/assets/js/sidebar-menu.js")}}"></script>
+    <script src="{{asset('public/backend/assets/js/datatable/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('public/backend/assets/js/datatable/datatables/datatable.custom.js')}}"></script>
     <script src="{{ asset("public/backend/assets/js/chart/chartist/chartist.js")}}"></script>
     <script src="{{ asset("public/backend/assets/js/chart/chartist/chartist-plugin-tooltip.js")}}"></script>
     <script src="{{ asset("public/backend/assets/js/chart/apex-chart/apex-chart.js")}}"></script>
@@ -149,8 +155,52 @@
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="{{ asset("public/backend/assets/js/script.js")}}"></script>
+    <script src="{{asset('public/backend/toastr/toastr.min.js')}}"></script>
+
     {{-- <script src="{{ asset("public/backend/assets/js/theme-customizer/customizer.js")}}"></script> --}}
     <!-- login js-->
     <!-- Plugin used-->
+
+
+
+    <script>
+        @if(Session::has('message'))
+        toastr.options =
+        {
+          "closeButton" : true,
+          "progressBar" : true
+        }
+            toastr.success("{{ session('message') }}");
+        @endif
+
+        @if(Session::has('error'))
+        toastr.options =
+        {
+          "closeButton" : true,
+          "progressBar" : true
+        }
+            toastr.error("{{ session('error') }}");
+        @endif
+
+        @if(Session::has('info'))
+        toastr.options =
+        {
+          "closeButton" : true,
+          "progressBar" : true
+        }
+            toastr.info("{{ session('info') }}");
+        @endif
+
+        @if(Session::has('warning'))
+        toastr.options =
+        {
+          "closeButton" : true,
+          "progressBar" : true
+        }
+            toastr.warning("{{ session('warning') }}");
+        @endif
+
+      </script>
+
   </body>
 </html>

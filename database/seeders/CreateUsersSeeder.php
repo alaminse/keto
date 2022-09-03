@@ -22,12 +22,12 @@ class CreateUsersSeeder extends Seeder
                'type'=>1,
                'password'=> bcrypt('123456'),
             ],
-            [
-               'name'=>'Doctor',
-               'email'=>'doctor@gmail.com',
-               'type'=> 2,
-               'password'=> bcrypt('123456'),
-            ],
+            // [
+            //    'name'=>'Doctor',
+            //    'email'=>'doctor@gmail.com',
+            //    'type'=> 2,
+            //    'password'=> bcrypt('123456'),
+            // ],
             [
                'name'=>'User',
                'email'=>'user@gmail.com',
