@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Admin\DietCombination;
+use App\Models\Admin\Dietcombination;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -64,6 +64,6 @@ class User extends Authenticatable
      */
     public function dietcombinations()
     {
-        return $this->belongsToMany(DietCombination::class, 'dietcombination_user');
+        return $this->belongsToMany(Dietcombination::class, 'dietcombination_user');
     }
 }

@@ -27,6 +27,15 @@
               <li><a href="{{ route('dietcombinations.index') }}">Combination List</a></li>
               <li><a href="{{ route('dietcombinations.create') }}">Add Combination</a></li>
               <li><a href="{{ route('dietcombinations.index') }}">Combination Request</a></li>
+              <li><a href="{{ route('dietcombination.trashed') }}">Trashed</a></li>
+            </ul>
+          </li>
+          <li class="sidebar-list">
+            <a class="sidebar-link sidebar-title" href="#"><i data-feather="clipboard"></i><span>Diet Chart</span></a>
+            <ul class="sidebar-submenu">
+              <li><a href="{{ route('dietcharts.index') }}">chart List</a></li>
+              <li><a href="{{ route('dietcharts.create') }}">Add Chart</a></li>
+              <li><a href="{{ route('dietchart.trashed') }}">Trashed</a></li>
             </ul>
           </li>
         </ul>

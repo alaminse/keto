@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class DietCombination extends Model
+class Dietcombination extends Model
 {
     use HasFactory, SoftDeletes;
 
@@ -22,4 +22,8 @@ class DietCombination extends Model
         return $this->belongsToMany(User::class, 'dietcombination_user');
     }
 
+    public function dietchart()
+    {
+        return $this->hasOne(Dietchart::class);
+    }
 }

@@ -101,7 +101,7 @@ class DietCombinationController extends Controller
      */
     public function show(DietCombination $dietCombination)
     {
-        echo('show');
+        //
     }
 
     /**
@@ -140,5 +140,11 @@ class DietCombinationController extends Controller
         } else {
             return redirect()->route('dietcombinations.index')->with('error','Something is wrong. Try Again!');
         }
+    }
+
+    public function trashed()
+    {
+        $data = DietCombination::withTrashed()->get();
+        dd($data);
     }
 }
